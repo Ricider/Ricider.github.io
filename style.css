@@ -1,0 +1,31 @@
+body 
+{
+	background-image: url("background.gif");
+    background-position: right bottom;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+h1 
+{
+	color: white;
+	font-family: courier;
+	font-size: 160%;
+	font-weight: bold;
+}
+button
+{
+	color: black;
+	font-family: courier;
+	font-size: 160%;
+	font-weight: bold;
+}
+iframe
+{
+	X-Frame-Options: ALLOW-FROM youtube.com;
+}
+
+.leftSide
+{
+	width: 70%;
+}
