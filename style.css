@@ -1,6 +1,6 @@
 body 
 {
-	background-image: url("background.gif");
+	background-image: url("images/background.gif");
     background-position: right bottom;
     position: fixed;
     top: 0px;
@@ -19,10 +19,8 @@ button
 	font-family: courier;
 	font-size: 160%;
 	font-weight: bold;
-}
-iframe
-{
-	X-Frame-Options: ALLOW-FROM youtube.com;
+	width: 200px;
+	height: 100px;
 }
 
 .leftSide

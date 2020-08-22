@@ -3,7 +3,8 @@ var currentIndex=0;
 const urls =
 [
 "https://www.youtube.com/embed/fC7oUOUEEi4",
-"https://www.youtube.com/embed/TVoGKvVBC6Q"
+"https://www.youtube.com/embed/TVoGKvVBC6Q",
+"https://www.youtube.com/embed/jmX_qqGOGMs"
 ]
 
 function nextVideo()
