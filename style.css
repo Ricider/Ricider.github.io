@@ -5,12 +5,20 @@ body
     position: fixed;
     top: 0px;
     left: 0px;
+	white-space: pre-line;
 }
 h1 
 {
 	color: white;
 	font-family: courier;
 	font-size: 160%;
+	font-weight: bold;
+}
+p
+{
+	color: white;
+	font-family: courier;
+	font-size: 100%;
 	font-weight: bold;
 }
 button
