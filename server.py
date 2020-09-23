@@ -26,6 +26,9 @@ class GetHandler(BaseHTTPRequestHandler):
         
         #api calls
         elif pathList[:4]=="/api":
+            if not self.path.strip()[1:] in allowedApis:
+                self.send_response(404)
+                return            
             message=open(pathList[1:],"r").read()
             self.send_response(200)
             self.send_header('Content-Type', 'text/raw; charset=utf-8')
@@ -33,11 +36,15 @@ class GetHandler(BaseHTTPRequestHandler):
             self.wfile.write(message.encode('utf-8'))            
         
     def do_POST(self):
+        if not self.path.strip()[1:] in allowedApis:
+            self.send_response(404)
+            return
         payloadSize=int(self.headers['Content-Length'])
         payload=self.rfile.read(payloadSize)
         modifiable=open(self.path.strip()[1:],"a")
         modifiable.writelines(str(payload)[2:-1]+"\n")
         self.send_response(201)
-        
+    
+allowedApis=["api/messages.txt"]    
 httpd = SocketServer.TCPServer(("", int(666)), GetHandler)
 httpd.serve_forever()
